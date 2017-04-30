@@ -1,0 +1,21 @@
+h1, h2, h4 {
+  text-align: center;
+}
+
+#logo h1 {
+  font: bold 3.5em/0.5em serif;
+}
+
+#logo h2 {
+  font: 2em;
+  letter-spacing: 7px;
+}
+
+p {
+  text-align: justify;
+  font: normal 1.1em/1.6em serif;
+}
+
+tab1 {
+  padding-left: 2.5em;
+}
