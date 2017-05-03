@@ -22,21 +22,18 @@ tab1 {
 
 div#content {
   width: 75%;
-  margin: 0 auto;
+  margin: 12.5%;
 }
 
 div#left {
   width: 45%;
   margin-left: 5%;
-
   float: left;
-  /*display: inline-block;*/
 }
 
 div#right {
   float: right;
   width: 45%;
-  /*display: inline-block;*/
   margin-left: 5%;
 }
 
