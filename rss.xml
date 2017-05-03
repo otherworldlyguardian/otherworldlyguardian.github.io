@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>The Future Looks Bright</title>
+  <link>https://otherworldlyguardian.github.io</link>
+  <description>Adventure through coding bootcamp with me.</description>
+  <language>en-us</language>
+
+  <item>
+    <title>04/22/17 - A New Hope</title>
+    <link>https://otherworldlyguardian.github.io/posts/042217.html</link>
+    <description>A introduction to who I am and how I got to where I am now.</description>
+  </item>
+  <item>
+    <title>04/29/17 - Week 1, Fun and Done</title>
+    <link>https://otherworldlyguardian.github.io/posts/042917.html</link>
+    <description>Introspection of the first week at camp.</description>
+  </item>
+  <item>
+    <title>05/03/17 - Git and Github, A Beginner's Guide</title>
+    <link>https://otherworldlyguardian.github.io/posts/050317.html</link>
+    <description>Git and Github, A Beginner's Guide</description>
+  </item>
+</channel>
+
+</rss>
