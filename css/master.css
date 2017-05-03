@@ -19,3 +19,27 @@ p {
 tab1 {
   padding-left: 2.5em;
 }
+
+div#content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+div#left {
+  width: 45%;
+  margin-left: 5%;
+
+  float: left;
+  /*display: inline-block;*/
+}
+
+div#right {
+  float: right;
+  width: 45%;
+  /*display: inline-block;*/
+  margin-left: 5%;
+}
+
+div.solo {
+  height: 700px;
+}

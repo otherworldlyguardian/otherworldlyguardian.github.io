@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Furture Looks Bright - 05/03/17</title>
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body>
+    <h1>05/03/17 - Git and Github, A Beginner's Guide</h1>
+    <a href="../index.html">&lt; Back to Home Page</a>
+    <div id="content">
+      <div class="p">
+        <h3>What is Git and Github?</h3>
+        <p>
+          Git is an open source version control system, or VCS. It is used to keep track of and store changes, or commits, made to a working directory or repository. Different from other VCS’s, Git thinks of these changes as snapshots of your whole directory over time as opposed to individual changes over time. It along with GitHub, essentially an online version of Git, provide a very powerful tool to developers for organizing a project in a clear and concise manner.
+        </p>
+      </div>
+      <div class="p">
+        <h3>Terms</h3>
+      </div>
+      <div class="solo">
+        <div id="left">
+          <p>
+            <b>status</b> - checks to if there are any differences between your last saved state and the current state of both your local copy and the remote copy
+          </p>
+          <p>
+            <b>add</b> - used to specify which files, one to many, to track for any changes in the active directory
+          </p>
+          <p>
+            <b>commit</b> - saves any tracked files to a new snapshot. A message, usually a short explanation of the changes made, can be added to the commit by adding the “-m” flag.
+          </p>
+          <p>
+            <b>push</b> - takes any commits made locally and saves them to the remote copy
+          </p>
+          <p>
+            <b>clone</b> - used to copy a remote repository to your computer while syncing the directories, local and remote, so that a new copy does not have to be made every time a change is made
+          </p>
+          <p>
+            <b>fetch</b> - obtains any changes made to the remote copy without changing your local files. these differences can then be compared before making any changes locally
+          </p>
+        </div>
+        <div id="right">
+          <p>
+            <b>branch</b> - used to make an exact copy of the current branch, usually done from the master branch, so that changes can be made without disrupting a working program. Also used to refer to the different copies themselves not just the process of making the copy.
+          </p>
+          <p>
+            <b>merge</b> - combines two copies together. this can be done to branches or the changes obtained through a “fetch” pf the remote copy.
+          </p>
+          <p>
+            <b>pull</b> - the same as fetch, but also immediately does a merge.
+          </p>
+          <p>
+            <b>fork</b> - a personal copy of another users repository on GitHub. This allows you to work or play with their code without affecting the original copy.
+          </p>
+          <p>
+            <b>pull request</b> - a request by you to incorporate the changes made to your fork of a repository back into the original copy. The owner can then accept or reject those changes made.
+          </p>
+        </div>
+      </div>
+      <div class="p">
+        <h3>Creating A Repository</h3>
+        <p>
+          You can start your own repository either locally or remotely, as in on GitHub, but for the purposes of this guide we are going to focus on starting it on GitHub. This is because the process is very similar on either, but starting on GitHub is a bit more straightforward. So to start you are going to click the plus button in the top right of any GitHub page, yes you need to be logged in. On the page that is presented to you, you have a field to name your repository, a description field, and if you want you can create a readme. You need to pay for private repositories so you are probably going to want to leave that option as public. Then from the next page you will want to follow the directions for "...create a new repository on the command line." And that's it. You have made your very first git repository and linked it with a remote copy.
+        </p>
+      </div>
+      <div class="p">
+        <h3>Working With A Repository That Is Not Your Own</h3>
+        <p>
+          So you found some code that you would like to play around with, now what? First off start by clicking that "Fork" button that should be in the top right of your screen. This will make a copy of it to your GitHub account that you can mess around with as you see fit. Once the fork is done you should see a "clone or download" button in green. Click that and then copy over the link. In your terminal first make sure you are in a directory that you want to create this repository, then type "git clone " and paste the link you copied, git return and the repository should be copied to a new directory inside the one you are in. Go ahead and open it up and have fun.
+        </p>
+        <p>
+          Now that you have made some changes and you like what you have done you are going to want to save or commit those changes. Start by adding these files to be tracking by typing "git add" and then any file names or "git add -A" to track all files that have been changed. Then you want to make your actual commit by "git commit -m 'Some message here'". Now you can push these changes up to your copy of the repository by doing a "git push" or "git push origin 'branch name'". And now you have modified someone else's code and saved it remotely to your copy.
+        </p>
+        <p>
+          If this is code that you are really proud of AND you think it is something that the owner could use you can preform a pull request on GitHub. This should be located on the left side of your screen about half down. Give them some awesome information about what you did and submit your request. Congratulations you are now a collaborator on GitHub!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
