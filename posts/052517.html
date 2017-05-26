@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Furture Looks Bright - 05/25/17</title>
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body>
+    <h1>05/25/17 - A Short Look At The .freeze Method</h1>
+    <a href="../index.html">&lt; Back to Home Page</a>
+    <div id="content">
+      <h3>What is the .freeze method?</h3>
+      <p>
+        <tab1>
+          The .freeze method is a way to turn mutable objects into immutable ones. This means that once .freeze is run on an object it can no longer be changed at any point. The .freeze works for any decendant of the Object class, meaning anything used inside Ruby can be "frozen".
+        </tab1>
+      </p>
+      <iframe src="https://giphy.com/embed/kxU95kPWajoxq" width="480" height="248" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/gifs/disney-frozen-kxU95kPWajoxq">via GIPHY</a>
+      <h3>What exactly does this mean?</h3>
+      <p>
+        <tab1>
+          All objects in Ruby are, by default, mutable which means they can be altered, changed, manipulated, or whatever other word you would prefer to use. THIS INCLUDES CONSTANTS which by definition should be...wait for it...constant or unchanging. Don't believe me? Go ahead open up whichever repl you feel most attached to and run this example yourself.
+        </tab1>
+      </p>
+      <div>
+        <code>
+          CONSTANT = "foo" <br>
+          # => "foo" <br><br>
+
+          CONSTANT << "bar" <br>
+          # => "foobar" <br><br>
+
+          CONSTANT = "new string" <br>
+          # => "new string" <br><br>
+        </code>
+      </div>
+      <p>
+        As you can see your "constant" can be added to or completely reset to a new value. This is bad. As well educated developers we know that once we set a constant it should be just that, constant.
+      </p>
+      <p>
+        <tab1>
+          The other example we can look at is strings. Any time a string literal, an actual string is used somewhere inside your code, is used it has a new object_id or a new location in memory.
+        </tab1>
+      </p>
+      <div>
+        <code>
+          "string".object_id <br>
+          # => 70173781215420 <br><br>
+
+          "string".object_id <br>
+          # => 70173781198020 <br><br>
+
+          "string".object_id <br>
+          # => 70173781149560 <br><br>
+        </code>
+      </div>
+      <p>
+        This could make your program very slow and inefficent. We have symbols that can fix this for us, but there are some instances where can't or shouldn't be used.
+      </p>
+      <h3>Enter the .freeze</h3>
+      <p>
+        <tab1>
+          Short and simple .freeze is awesome. Any object you use it on will be completely unchangeable. End of story.
+        </tab1>
+      </p>
+      <h3>Small side note</h3>
+      <p>
+        <tab1>
+          Yuhihiro Matsumoto, or Matz, the creator of Ruby, shared on twitter in August of 2015 that in Ruby 3.0 all strings will by default be immutable.
+        </tab1>
+      </p>
+    </div>
+  </body>
+</html>
