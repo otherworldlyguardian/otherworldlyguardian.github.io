@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Furture Looks Bright - 05/25/17</title>
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body>
+    <h1>06/11/17 - Debounce and Throttle</h1>
+    <a href="../index.html">&lt; Back to Home Page</a>
+    <div id="content">
+      <h3>What are the debounce and throttle functions?</h3>
+      <p>
+        <tab1>
+          Both the debounce and throttle are functions that limit the amount of times another function can fire over a certain time frame. They answer the question "How often can a certain function be called over time?" in slightly different ways. You can use them through a number of javascript libraries and since ES6 they have built into javascript itself.
+        </tab1>
+      </p>
+      <h3>So why use them?</h3>
+      <p>
+        <tab1>
+          One of the primary ways and reasons to use debounce or throttle is event listeners. Some event execute so quickly that they can execute hundreds of times in a second, while others can bog down the browser due to multiple events queuing
+        </tab1>
+      </p>
+      <h3>Functions</h3>
+      <div style="height:270px">
+        <div id="left">
+          <xmp>
+function debounce(callback, wait, context = this) {
+  let timeout = null
+  let callbackArgs = null
+
+  const later = () => callback.apply(context, callbackArgs)
+
+  return function() {
+    callbackArgs = arguments
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
+}
+          </xmp>
+        </div>
+        <div id="right">
+          <xmp>
+function throttle(callback, wait, context = this) {
+  let timeout = null
+  let callbackArgs = null
+
+  const later = () => {
+    callback.apply(context, callbackArgs)
+    timeout = null
+  }
+
+  return function() {
+    if (!timeout) {
+      callbackArgs = arguments
+      timeout = setTimeout(later, wait)
+    }
+  }
+}
+          </xmp>
+        </div>
+      </div>
+      <h3>Explanation</h3>
+      <p>
+        <tab1>
+
+        </tab1>
+      </p>
+      <h3>Check out the nice visual implementation</h3>
+      <a href="http://drupalmotion.com/article/debounce-and-throttle-visual-explanation">Debounce and Throttle in action</a>
+      <h3>Scources</h3>
+      <ul>
+        <li><a href="https://davidwalsh.name/javascript-debounce-function">DWB</a></li>
+        <li><a href="http://drupalmotion.com/article/debounce-and-throttle-visual-explanation">Drupal Motion</a></li>
+        <li><a href="https://stackoverflow.com/questions/24004791/can-someone-explain-the-debounce-function-in-javascript">Stackoverflow</a></li>
+        <li><a href="https://john-dugan.com/javascript-debounce/">John Dugan</a></li>
+        <li><a href="https://gist.github.com/beaucharman">Beau Charman</a> - for ES6 functions</li>
+      </ul>
+    </div>
+  </body>
+</html>
