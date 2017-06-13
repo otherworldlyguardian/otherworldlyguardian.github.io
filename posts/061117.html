@@ -18,10 +18,11 @@
       <h3>So why use them?</h3>
       <p>
         <tab1>
-          One of the primary ways and reasons to use debounce or throttle is event listeners. Some event execute so quickly that they can execute hundreds of times in a second, while others can bog down the browser due to multiple events queuing
+          One of the primary ways and reasons to use debounce or throttle is event listeners. Some event execute so quickly that they can execute hundreds of times in a second, while others can bog down the browser due to multiple events queuing that require time and memory to execute properly.
         </tab1>
       </p>
       <h3>Functions</h3>
+      <p>These are the very basic versions that are implemented in ES6. They are by no means the extent of what can be accomplished with functions of this style.</p>
       <div style="height:270px">
         <div id="left">
           <xmp>
@@ -61,11 +62,34 @@ function throttle(callback, wait, context = this) {
         </div>
       </div>
       <h3>Explanation</h3>
+      <strong>Debounce</strong>
       <p>
         <tab1>
-
+          This limits the execution of the controlled function to only once after a set delay. The delay gets reset everytime the specified action happens and the execution of the function will not happen until no actions happen for the given delay. For example, you enter into an elevator, doors are closing and suddenly your friend appears in the hall and you stop the elevator for him. You are debouncing the elevator departure by resetting when the doors can close.
         </tab1>
       </p>
+      <strong>Throttle</strong>
+      <p>
+        <tab1>
+          This limits the execution of the controlled function to at most once after a set delay. This delay does <strong>NOT</strong> get reset by another action and will execute the function after the given delay regardless. For example, a subway train will only stop at a station for so long before it leaves regardless of how many people are still trying to get on.
+        </tab1>
+      </p>
+      <strong>Immediate, Leading, Trailing</strong>
+      <p>
+        <tab1>
+          Most debounce and throttle functions include another parameter that modifies when the actual execution happens. Debounce usually has an immediate which will execute the function and then set the delay. Throttle can have a leading or trailing that changes when the "value" is opened.
+        </tab1>
+      </p>
+      <h3>Event Listener Examples</h3>
+      <strong>Debounce</strong>
+      <ul>
+        <li>Typing quickly will cause an event to fire on every single keypress. This can quickly slow the browser if let's say that event is tied to a database query.</li>
+        <li>Resizing the browser window will make any resize events execute multiple times and quickly everytime an edge gets moved a pixel.</li>
+      </ul>
+      <strong>Throttle</strong>
+      <ul>
+        <li>Events on mouse movement or scrolling, especially scrolling, can fire hundreds of times in a fraction of a second.</li>
+      </ul>
       <h3>Check out the nice visual implementation</h3>
       <a href="http://drupalmotion.com/article/debounce-and-throttle-visual-explanation">Debounce and Throttle in action</a>
       <h3>Scources</h3>
