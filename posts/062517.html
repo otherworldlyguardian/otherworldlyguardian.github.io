@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Furture Looks Bright - 05/25/17</title>
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body>
+    <h1>06/11/17 - .matches or matchesSelector</h1>
+    <a href="../index.html">&lt; Back to Home Page</a>
+    <div id="content">
+      <h3>What is .matches?</h3>
+      <p>
+        Element.matches(slectorString)
+      </p>
+      <p>
+        <tab1>
+          The .matches function is part of the Element class prototype. This means it can be called an any part of the DOM or any variable that has an element of the DOM stored. It is used to test for truthiness between the given element and the selectorString arguement. This can be much easier than using the typical comparison operator.
+        </tab1>
+      </p>
+      <img src="http://i.capsspot.com/s/5/3/201168.gif" style="width:150px;height:150px">
+      <h3>Problems with .matches</h3>
+      <p>
+        <tab1>
+          According to MDN, this is the method that should be used as a standard. But, as with all things JavaScript, you can never be certain as to who is using it properly. To circumvent this issue the folloing function can be used as a catch all to guaruntee you will not run into an issue of having your program broken. (at least not because of this method)
+        </tab1>
+      </p>
+      <h3>Function</h3>
+      <xmp>
+function matchesSelector(el, selector) {
+	var p = Element.prototype;
+	var f = p.matches || p.webkitMatchesSelector || p.mozMatchesSelector || p.msMatchesSelector || function(s) {
+		return [].indexOf.call(document.querySelectorAll(s), this) !== -1;
+	};
+	return f.call(el, selector);
+}
+      </xmp>
+      <h3>Examples</h3>
+      <xmp>
+var test = document.getElementbyId('container')
+
+test.matches('#container')
+
+matchesSelector(test, '#container')
+      </xmp>
+      <h3>Scources</h3>
+      <ul>
+        <li><a href="https://davidwalsh.name/element-matches-selector">DWB</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
