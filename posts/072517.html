@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Furture Looks Bright - 07/25/17</title>
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body>
+    <h1>07/25/17 - Port Forwarding</h1>
+    <a href="../index.html">&lt; Back to Home Page</a>
+    <div id="content">
+      <h3>What is Port Forwarding?</h3>
+      <p>
+        <tab1>
+          Port Forwarding is essentially call forwarding for the internet. It is the process of taking a request to a specific Interent Protocol, or IP, address and redirecting it to another one.
+        </tab1>
+      </p>
+      <h3>Why is port forwarding neccessary?</h3>
+      <p>
+        <tab1>
+          Every device connected to the internet has an IP address, usually provided by and Internet Service Provider. However these addresses are not handed out to every device but to the network or router that the device connects to. So everything that connects to the internet through the same network will all have the same Public IP address. So each device gets assigned a Private IP address by the network they connect to. This will always start with 192.168. Usually the network has no issues without routing information to each individual device because it is the device itself that initiates any requests for information. Based on who made the request the network knows who to send the response to when it comes back from the website. But when the request initiates from outside the network it can cause problems since it does not know what to do with the information.
+        </tab1>
+      </p>
+      <h3>Enter Port Forwarding</h3>
+      <p>
+        <tab1>
+          So this is where Port Forwarding comes in. Port Forwarding is a setting you place on your router to accept incoming information. The router you connect to has thousands of ports that can be configured. Some of them, the ones that you use for everyday internet use, are already configured and are the same across every network, ie. port 80. So to avoid any conflicts with existing port configurations, port forwarding is usuaully done anywhere above port 5000. Once a port is setup properly it will take any information it recieves to that location and send it to specified location on the network, usually some device on the network.
+        </tab1>
+      </p>
+      <h3>Setting up Port Forwarding</h3>
+      <p>
+        <tab1>
+          Unfortunately due to the fact that every router is setup differently this explanation will have to be somewhat vague. But the general steps should hopefully give you an idea of what you need to do and how to do it.
+          <ul>
+            <li>First you are going to have to connect to your router. This is usually achieved by opening a web browser and typing 192.168.1.1 into the url bar and hitting enter. Once the page loades you will need to log in. Can not really help you with this part but if you have never done this before try 'admin' for both the user and password fields. If that doesn't work try looking at the physical router or online for the specific type of router you have. If all this fails contacting you ISP might yeild some results.</li>
+            <li>Once you have logged in you will need two pieces of information. First your public IP, obtained easiest by going to whatsmyipaddress.com. You will need this to send to whoever you want to be sending you information. Second you need your device's private IP on the network. (this may vary from router to router)</li>
+            <li>After you have logged in and have the needed information you will need to look for the port forwarding setup section of your router. Sometimes this is located in the advanced settings section from the main menu. </li>
+            <li>Then you are going to click 'add a port' or whatever else makes the most sense here. (I know, I know you don't want to have to use your brain)</li>
+            <li>Next configure the port how you want it. Usually this means giving it a name, what port this will be (again something over 5000 to be safe), what device to forward to (this could be the name of the device, it's mac address, or the private ip address that i had you go get earlier), and what port on that device to send the information to (probably easiest to keep them the same).</li>
+            <li>Finally once you have submitted the configuration you should be able to send anyone to 'your public ip':'configured port' (colon is important people)</li>
+          </ul>
+        </tab1>
+      </p>
+    </div>
+  </body>
+</html>
